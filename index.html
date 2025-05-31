@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Games - Next Level Gaming Experience</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .game-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+        .navbar {
+            background-color: #1a1a2e !important;
+        }
+        .footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 30px 0;
+        }
+        .tooltip-inner {
+            background-color: #6c63ff;
+        }
+        .tooltip-arrow::before {
+            border-bottom-color: #6c63ff !important;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(108, 99, 255, 0.1);
+            color: #6c63ff;
+        }
+        .modal-header {
+            background-color: #1a1a2e;
+            color: white;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-joystick me-2"></i>Nexus Games
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#games">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Welcome to Nexus Games</h1>
+            <p class="lead mb-5">Where imagination meets cutting-edge technology</p>
+            <button class="btn btn-primary btn-lg me-2" data-bs-toggle="modal" data-bs-target="#trailerModal">
+                <i class="bi bi-play-circle"></i> Watch Trailer
+            </button>
+            <a href="#games" class="btn btn-outline-light btn-lg">
+                <i class="bi bi-joystick"></i> Explore Games
+            </a>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="trailerModal" tabindex="-1" aria-labelledby="trailerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="trailerModalLabel">Nexus Games - Official Trailer</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games Section -->
+    <section id="games" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Latest Releases</h2>
+            
+            <!-- Carousel/Slider -->
+            <div id="gameCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="d-block w-100" alt="Game 1">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                            <h5>Cyber Nexus</h5>
+                            <p>Explore a futuristic open world in our flagship RPG.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="d-block w-100" alt="Game 2">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                            <h5>Galactic Outlaws</h5>
+                            <p>Space adventure with endless possibilities.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" class="d-block w-100" alt="Game 3">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+                            <h5>Shadow Realms</h5>
+                            <p>Dark fantasy with immersive storytelling.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- Game Cards -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card game-card">
+                        <img src="https://images.unsplash.com/photo-1587840171670-8b850147754e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" class="card-img-top" alt="Cyber Nexus">
+                        <div class="card-body">
+                            <h5 class="card-title">Cyber Nexus</h5>
+                            <p class="card-text">Immerse yourself in a neon-lit cyberpunk world full of intrigue and danger.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Available on PC, PS5, and Xbox Series X">Platforms</a>
+                            <a href="#" class="btn btn-outline-secondary ms-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card game-card">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Galactic Outlaws">
+                        <div class="card-body">
+                            <h5 class="card-title">Galactic Outlaws</h5>
+                            <p class="card-text">Build your crew, upgrade your ship, and explore the galaxy.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="VR compatible on all platforms">VR Ready</a>
+                            <a href="#" class="btn btn-outline-secondary ms-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card game-card">
+                        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Shadow Realms">
+                        <div class="card-body">
+                            <h5 class="card-title">Shadow Realms</h5>
+                            <p class="card-text">Dark fantasy RPG with deep character customization and branching storylines.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Tabs -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">About Nexus Games</h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded mb-4" alt="Game Development">
+                </div>
+                <div class="col-lg-6">
+                    <ul class="nav nav-tabs" id="aboutTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="history-tab" data-bs-toggle="tab" data-bs-target="#history" type="button">Our History</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team" type="button">Our Team</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button">Our Vision</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3 border border-top-0 rounded-bottom" id="aboutTabsContent">
+                        <div class="tab-pane fade show active" id="history" role="tabpanel">
+                            <p>Founded in 2015, Nexus Games started as a small indie studio with just 5 passionate developers. Our first game, "Pixel Adventures," gained a cult following and allowed us to grow into the AAA studio we are today.</p>
+                            <p>We've since released 12 critically acclaimed titles across multiple platforms, winning numerous awards for innovation and storytelling.</p>
+                        </div>
+                        <div class="tab-pane fade" id="team" role="tabpanel">
+                            <p>Our team consists of over 200 talented individuals from around the world, including:</p>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item">Game Designers</li>
+                                <li class="list-group-item">Programmers</li>
+                                <li class="list-group-item">Artists</li>
+                                <li class="list-group-item">Writers</li>
+                                <li class="list-group-item">Sound Engineers</li>
+                            </ul>
+                            <p>We pride ourselves on our diverse and inclusive workplace culture.</p>
+                        </div>
+                        <div class="tab-pane fade" id="vision" role="tabpanel">
+                            <p>Our vision is to push the boundaries of interactive entertainment by:</p>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">Creating immersive worlds that players never want to leave</a>
+                                <a href="#" class="list-group-item list-group-item-action">Developing innovative gameplay mechanics</a>
+                                <a href="#" class="list-group-item list-group-item-action">Telling stories that resonate emotionally</a>
+                                <a href="#" class="list-group-item list-group-item-action">Building communities around our games</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section with Accordion -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                            When will Cyber Nexus be released on Nintendo Switch?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We're currently working on the Switch port and expect to release it in Q2 2024. The game requires significant optimization to run smoothly on the Switch hardware while maintaining visual quality.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                            Do you offer internships for aspiring game developers?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! We offer summer internships and year-round co-op positions for students. Check our careers page for current openings and application requirements.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                            How can I get involved in beta testing your games?
+                        </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We regularly recruit beta testers from our community. The best way to get selected is to join our Discord server, participate in forums, and sign up for our newsletter where we announce testing opportunities.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Form -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select class="form-select" id="subject">
+                                <option selected>Choose a topic</option>
+                                <option>Game Support</option>
+                                <option>Business Inquiries</option>
+                                <option>Press</option>
+                                <option>Careers</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="newsletter">
+                            <label class="form-check-label" for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h4><i class="bi bi-geo-alt"></i> Our Headquarters</h4>
+                    <p class="mb-4">hans and rene <br> lekki <br>phase 1</p>
+                    
+                    <h4><i class="bi bi-envelope"></i> Email</h4>
+                    <p class="mb-4">bayode.samuel@st.rtau.edu.com<br>samuelbayode78@gmail.com</p>
+                    
+                    <h4><i class="bi bi-telephone"></i> Phone</h4>
+                    <p class="mb-4">07058361398<br>Mon-Fri, 9am-5pm PST</p>
+                    
+                    <h4><i class="bi bi-people"></i> Social Media</h4>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-discord"></i></a>
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5><i class="bi bi-joystick"></i> Nexus Games</h5>
+                    <p>Creating unforgettable gaming experiences since 2015.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#games" class="text-white">Games</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-white">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <p class="mb-0">&copy; 2023 Nexus Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+</body>
+</html>
